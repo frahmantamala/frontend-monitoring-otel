@@ -189,9 +189,3 @@ This monitoring system tracks metrics that directly correlate with business outc
 - Core Web Vitals for business pages
 - API response times for critical endpoints
 - Error rates that affect user experience
-
-## 👨‍💻 Author
-
-**Fadhil** - frontend monitoring
-
----
