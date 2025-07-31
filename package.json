@@ -1,0 +1,45 @@
+{
+  "name": "frontend-monitoring-otel",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@nuxt/eslint-config": "^0.3.13",
+    "@nuxtjs/tailwindcss": "^6.12.1",
+    "eslint": "^9.7.0",
+    "tailwindcss": "^3.4.1",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35"
+  },
+  "dependencies": {
+    "nuxt": "^4.0.1",
+    "vue": "^3.5.18",
+    "vue-router": "^4.5.1",
+    "@opentelemetry/api": "^1.8.0",
+    "@opentelemetry/auto-instrumentations-web": "^0.39.0",
+    "@opentelemetry/context-zone": "^1.24.1",
+    "@opentelemetry/core": "^1.24.1",
+    "@opentelemetry/exporter-trace-otlp-http": "^0.51.1",
+    "@opentelemetry/instrumentation": "^0.51.1",
+    "@opentelemetry/instrumentation-document-load": "^0.38.0",
+    "@opentelemetry/instrumentation-fetch": "^0.51.1",
+    "@opentelemetry/instrumentation-user-interaction": "^0.38.0",
+    "@opentelemetry/instrumentation-xml-http-request": "^0.51.1",
+    "@opentelemetry/resources": "^1.24.1",
+    "@opentelemetry/sdk-metrics": "^1.24.1",
+    "@opentelemetry/sdk-trace-web": "^1.24.1",
+    "@opentelemetry/semantic-conventions": "^1.24.1",
+    "@pinia/nuxt": "^0.5.1",
+    "chart.js": "^4.4.3",
+    "pinia": "^2.1.7",
+    "vue-chartjs": "^5.3.1"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}
