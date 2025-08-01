@@ -119,7 +119,7 @@
               <span class="text-sm text-gray-600">Live</span>
             </div>
           </div>
-          <p class="text-gray-600 text-sm mt-1">Real API calls and user interactions being tracked</p>
+          <p class="text-gray-600 text-sm mt-1">API calls and user interactions being tracked</p>
         </div>
         
         <div class="p-6">
@@ -288,7 +288,7 @@ const loadProducts = async () => {
       customAttributes: { section: 'featured', limit: 8 }
     })
     
-    // Use real API with error handling
+    // Use API with error handling
     const productsData = await apiClient.makeApiCall('load_products', () => 
       apiClient.ecommerce.getProducts(8)
     )
@@ -393,7 +393,7 @@ const addToCart = async (product) => {
       }
     })
     
-    // Use real API
+    // Use API
     await apiClient.makeApiCall('add_to_cart', () => 
       apiClient.ecommerce.addToCart(product.id, 1)
     )
@@ -491,9 +491,9 @@ onMounted(async () => {
 
 // Page metadata
 useHead({
-  title: 'ShopDemo - Real E-commerce with Monitoring',
+  title: 'ShopDemo - E-commerce with Monitoring',
   meta: [
-    { name: 'description', content: 'Real e-commerce application with OpenTelemetry monitoring' }
+    { name: 'description', content: 'e-commerce application with OpenTelemetry monitoring' }
   ]
 })
 </script>

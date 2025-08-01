@@ -7,7 +7,7 @@
           Frontend Monitoring
         </h1>
         <p class="text-gray-600 mt-2">
-          Real e-commerce app with OpenTelemetry monitoring - showing how to filter noise and track meaningful metrics
+          e-commerce app with OpenTelemetry monitoring - showing how to filter noise and track meaningful metrics
         </p>
       </div>
     </header>
@@ -52,7 +52,7 @@
         <div class="flex items-center space-x-6 text-sm">
           <div class="flex items-center">
             <div :class="`w-2 h-2 rounded-full mr-2 ${isRealUser ? 'bg-green-500' : 'bg-red-500'}`"></div>
-            <span>{{ isRealUser ? 'Real User Detected' : 'Bot/Automated Traffic' }}</span>
+            <span>{{ isRealUser ? 'User Detected' : 'Bot/Automated Traffic' }}</span>
           </div>
           <div class="flex items-center">
             <div :class="`w-2 h-2 rounded-full mr-2 ${telemetryEnabled ? 'bg-green-500' : 'bg-gray-400'}`"></div>
@@ -64,9 +64,9 @@
       <!-- Features -->
       <div class="grid md:grid-cols-3 gap-6 mb-8">
         <div class="bg-white border border-gray-200 rounded-lg p-6">
-          <h3 class="text-lg font-medium text-gray-900 mb-3">Real E-commerce App</h3>
+          <h3 class="text-lg font-medium text-gray-900 mb-3">E-commerce App</h3>
           <p class="text-gray-600 text-sm mb-4">
-            Functional shop using FakeStore API - real products, cart, checkout flow
+            Functional shop using FakeStore API - products, cart, checkout flow
           </p>
           <ul class="text-sm text-gray-500 space-y-1">
             <li>Product data from FakeStore API</li>
@@ -78,7 +78,7 @@
         <div class="bg-white border border-gray-200 rounded-lg p-6">
           <h3 class="text-lg font-medium text-gray-900 mb-3">OpenTelemetry Monitoring</h3>
           <p class="text-gray-600 text-sm mb-4">
-            Real API calls instrumented with OpenTelemetry spans and metrics
+            API calls instrumented with OpenTelemetry spans and metrics
           </p>
           <ul class="text-sm text-gray-500 space-y-1">
             <li>Live API call tracking</li>
@@ -218,7 +218,7 @@ const metricsStore = useMetricsStore()
 
 // Check if user is detected as real
 onMounted(() => {
-  // Check various signals for real user detection
+  // Check various signals for user detection
   const hasUserAgent = navigator.userAgent && !/(bot|crawler|spider)/i.test(navigator.userAgent)
   const hasReasonableScreen = window.screen.width * window.screen.height > 100000
   const isNotHeadless = !navigator.webdriver
@@ -230,7 +230,7 @@ onMounted(() => {
   metricsStore.initialize(isRealUser.value)
   
   if (isRealUser.value) {
-    addConsoleLog('[OTEL] Initialized for real user session')
+    addConsoleLog('[OTEL] Initialized for user session')
     addConsoleLog('[FILTER] Smart filtering enabled')
   } else {
     addConsoleLog('[FILTER] Bot detected - telemetry disabled')

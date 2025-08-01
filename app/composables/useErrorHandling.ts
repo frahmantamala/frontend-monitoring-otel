@@ -136,7 +136,7 @@ export const useErrorHandling = () => {
     }
   }
 
-  // Simulate real backend changes that break frontend
+  // Simulate backend changes that break frontend
   const simulateBackendBreakage = (data: any, breakageType: string) => {
     const broken = JSON.parse(JSON.stringify(data))
     

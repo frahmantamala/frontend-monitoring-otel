@@ -59,7 +59,7 @@ export const useMetricsStore = defineStore('metrics', {
     initialize(isRealUser: boolean) {
       this.isRealUser = isRealUser
       this.telemetryEnabled = isRealUser
-      this.addActivity('session_start', `Session started - ${isRealUser ? 'Real User' : 'Bot'} detected`)
+      this.addActivity('session_start', `Session started - ${isRealUser ? 'User' : 'Bot'} detected`)
     },
 
     // Track page view

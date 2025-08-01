@@ -86,7 +86,7 @@ class SmartFilter {
   }
 
   /**
-   * Advanced real user detection - multiple signals
+   * Advanced user detection - multiple signals
    */
   isRealUserSession(): boolean {
     // Basic bot detection
@@ -105,7 +105,7 @@ class SmartFilter {
     // In development, always allow
     if (process.dev) return true
     
-    // Real users typically interact with the page
+    // users typically interact with the page
     return hasInteracted || hasMovedMouse || hasScrolled || hasTyped
   }
 
@@ -123,11 +123,11 @@ class SmartFilter {
 
 const smartFilter = new SmartFilter()
 
-// Set up real user detection listeners
+// Set up user detection listeners
 // These run once to identify human behavior
 document.addEventListener('click', () => {
   document.body.classList.add('user-interacted')
-  console.log('👆 Real user interaction detected')
+  console.log('👆 user interaction detected')
 }, { once: true })
 
 document.addEventListener('mousemove', () => {
@@ -159,11 +159,11 @@ function extractBusinessContext(url: string): { feature: string; priority: strin
 }
 
 /**
- * Initialize OpenTelemetry - Only for Real Users!
+ * Initialize OpenTelemetry - Only for Users!
  * This is the key to avoiding junk data in your monitoring
  */
 if (smartFilter.isRealUserSession()) {
-  console.log('🔬 Initializing OpenTelemetry for real user session')
+  console.log('🔬 Initializing OpenTelemetry for user session')
   
   const resource = new Resource({
     [SEMRESATTRS_SERVICE_NAME]: 'frontend-monitoring-demo',
@@ -307,7 +307,7 @@ if (smartFilter.isRealUserSession()) {
   
   // Track page views with business context
   const pageViewCounter = meter.createCounter('page_views', {
-    description: 'Number of page views by real users'
+    description: 'Number of page views by users'
   })
   
   // Track user engagement
@@ -323,7 +323,7 @@ if (smartFilter.isRealUserSession()) {
   })
 
   console.log('OpenTelemetry initialized with smart filtering enabled')
-  console.log('🎯 Only tracking real users and business-critical metrics')
+  console.log('🎯 Only tracking users and business-critical metrics')
   
 } else {
   console.log('🤖 Bot/automated traffic detected - telemetry disabled')

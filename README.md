@@ -1,11 +1,11 @@
-# Real E-commerce App with Smart Frontend Monitoring
+# E-commerce App with  Monitoring
 
 [![Nuxt](https://img.shields.io/badge/Nuxt-4.0-00DC82?logo=nuxt.js)](https://nuxt.com/)
 [![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-1.24-326CE5?logo=opentelemetry)](https://opentelemetry.io/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?logo=typescript)](https://www.typescriptlang.com/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-06B6D4?logo=tailwindcss)](https://tailwindcss.com/)
 
-> **Real Production Demo**: Fully functional e-commerce application using real APIs (FakeStore, ReqRes, JSONPlaceholder) with enterprise-grade OpenTelemetry monitoring that eliminates noise and focuses on business outcomes.
+> **Production Demo**: Fully functional e-commerce application using APIs (FakeStore, ReqRes, JSONPlaceholder) with enterprise-grade OpenTelemetry monitoring that eliminates noise and focuses on business outcomes.
 
 ## 🎯 Problem Statement
 
@@ -42,7 +42,7 @@ Smart Filtering Layer     (Bot detection, noise reduction)
 
 ## Features
 
-### **Real E-commerce Application**
+### **E-commerce Application**
 - **FakeStore API Integration** - Product catalog with 20+ items across categories
 - **ReqRes Authentication** - Working login system with user profiles
 - **Full Shopping Cart** - Add to cart, checkout flow with payment simulation
@@ -50,11 +50,11 @@ Smart Filtering Layer     (Bot detection, noise reduction)
 - **Realistic Checkout** - Multi-step purchase flow with success/failure scenarios
 
 ### **Production-Grade Monitoring**
-- **Real API Instrumentation** - Every API call tracked with OpenTelemetry spans
+- **API Instrumentation** - Every API call tracked with OpenTelemetry spans
 - **Business Context Tagging** - Revenue, engagement, performance impact classification
 - **User Journey Tracking** - Complete funnel analysis from browse to purchase
 - **Smart Bot Filtering** - Eliminates automated traffic before data collection
-- **Live Telemetry Stream** - Watch real monitoring data as you interact
+- **Live Telemetry Stream** - Watch monitoring data as you interact
 - **SLA Monitoring** - Domain-specific performance targets and alerting
 
 ### **Three Experience Levels**
@@ -131,9 +131,9 @@ yarn preview
 
 ### **Basic Smart Filtering**
 ```typescript
-// Real user detection prevents bot noise
+// user detection prevents bot noise
 if (smartFilter.isRealUserSession()) {
-  // Only initialize telemetry for real users
+  // Only initialize telemetry for users
   initializeOpenTelemetry()
 }
 ```

@@ -253,7 +253,7 @@ export const useInstrumentation = () => {
           })
         }
 
-        // Simulate API call (in real app, this would be actual fetch)
+        // Simulate API call (in app, this would be actual fetch)
         const response = await this.simulateApiCall(endpoint, method)
         const duration = Date.now() - startTime
 

@@ -58,7 +58,7 @@
           </button>
         </div>
         <p class="text-sm text-gray-600">
-          Each scenario simulates real backend changes that commonly break frontend apps
+          Each scenario simulates backend changes that commonly break frontend apps
         </p>
       </div>
 
@@ -205,7 +205,7 @@ const loadProduct = async (scenario) => {
   try {
     addErrorLog('info', `Loading product with scenario: ${scenario}`)
     
-    // Get a real product from the API
+    // Get a product from the API
     const originalProduct = await apiClient.makeApiCall('get_product', () => 
       apiClient.ecommerce.getProduct(1)
     )

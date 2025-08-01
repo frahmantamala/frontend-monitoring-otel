@@ -119,7 +119,7 @@ export const useApiClient = () => {
       // Simulate checkout process
       await new Promise(resolve => setTimeout(resolve, 1500)) // Simulate processing time
       
-      // Randomly fail 5% of checkouts to simulate real errors
+      // Randomly fail 5% of checkouts to simulate errors
       if (Math.random() < 0.05) {
         throw new Error('Payment processing failed')
       }
